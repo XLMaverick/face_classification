@@ -10,6 +10,7 @@ from keras.layers import SeparableConv2D
 from keras import layers
 from keras.regularizers import l2
 
+<<<<<<< HEAD
 import keras  
 from keras.preprocessing.image import ImageDataGenerator  
 from keras.models import Sequential  
@@ -53,6 +54,8 @@ def bottleneck_Block(inpt,nb_filters,strides=(1,1),with_conv_shortcut=False):
 
 
 
+=======
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
 def simple_CNN(input_shape, num_classes):
 
     model = Sequential()
@@ -382,6 +385,7 @@ def big_XCEPTION(input_shape, num_classes):
     model = Model(img_input, output)
     return model
 
+<<<<<<< HEAD
 def VGG16(input_shape, num_classes):
 
     weight_decay = 0.0005
@@ -509,6 +513,8 @@ def resnet_50(input_shape, num_classes):
     model = Model(inputs=img_input, outputs=x)
     return model
 
+=======
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
 
 if __name__ == "__main__":
     input_shape = (64, 64, 1)

@@ -11,8 +11,11 @@ from keras.callbacks import ReduceLROnPlateau
 from keras.preprocessing.image import ImageDataGenerator
 
 from models.cnn import mini_XCEPTION
+<<<<<<< HEAD
 from models.cnn import VGG16
 from models.cnn import resnet_50
+=======
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
 from utils.datasets import DataManager
 from utils.datasets import split_data
 from utils.preprocessor import preprocess_input
@@ -25,7 +28,11 @@ validation_split = .2
 verbose = 1
 num_classes = 7
 patience = 50
+<<<<<<< HEAD
 base_path = '../trained_models/emotion_models/resnet_50/'
+=======
+base_path = '../trained_models/emotion_models/'
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
 
 # data generator
 data_generator = ImageDataGenerator(
@@ -38,7 +45,11 @@ data_generator = ImageDataGenerator(
                         horizontal_flip=True)
 
 # model parameters/compilation
+<<<<<<< HEAD
 model = resnet_50(input_shape, num_classes)
+=======
+model = mini_XCEPTION(input_shape, num_classes)
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
 model.compile(optimizer='adam', loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.summary()
@@ -54,7 +65,11 @@ for dataset_name in datasets:
     early_stop = EarlyStopping('val_loss', patience=patience)
     reduce_lr = ReduceLROnPlateau('val_loss', factor=0.1,
                                   patience=int(patience/4), verbose=1)
+<<<<<<< HEAD
     trained_models_path = base_path + dataset_name + 'resnet_50'
+=======
+    trained_models_path = base_path + dataset_name + '_mini_XCEPTION'
+>>>>>>> 0ad164512934b6ff8cf616e4588820dc0f9827a9
     model_names = trained_models_path + '.{epoch:02d}-{val_acc:.2f}.hdf5'
     model_checkpoint = ModelCheckpoint(model_names, 'val_loss', verbose=1,
                                                     save_best_only=True)
