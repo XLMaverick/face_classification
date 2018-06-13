@@ -55,6 +55,7 @@ With a few steps one can get its own face classification and detection running. 
 
 * Run the train_emotion_classification.py file
 > python3 train_emotion_classifier.py
+* 安装python2对应的keras可以正常运行
 > python train_emotion_classifier.py
 
 ### To train previous/new models for gender classification:
@@ -68,5 +69,4 @@ With a few steps one can get its own face classification and detection running. 
 
 * Run the train_gender_classification.py file
 > python3 train_gender_classifier.py
-* 安装python2对应的keras可以正常运行，
 
