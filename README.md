@@ -22,6 +22,9 @@ Real-time demo:
 
 ## Instructions
 
+###代码中statistics统计学模块需要自己进行安装，安装命令为
+>sudo pip install statistics 
+目前尝试的代码均运行在python2的环境，python3环境暂时没有尝试。
 ### Run real-time emotion demo:
 > python3 video_emotion_color_demo.py
 
